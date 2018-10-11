@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+
+	<form name="app-gst-config-form" title="App gst"
+		model="com.axelor.apps.base.db.AppGst" canDelete="false" canNew="false"
+		width="large">
+
+		<panel>
+			<button name="generateGstConfigurations" colSpan="4"
+				title="Generate Gst configurations" />
+			<panel-dashlet action="admin.root.conf.gst.config"
+				colSpan="12" />
+		</panel>
+	</form>
+
+	<action-view name="admin.root.conf.gst.config" title="Gst configurations"
+		model="com.axelor.apps.base.db.gst">
+		<view type="form" name="app-gst-config-form" />
+	</action-view>
+
+</object-views>
